@@ -1,4 +1,5 @@
 **packer
 **packer_*.zip
 packer_cache/
-disk-image/boot-exit/boot-exit-image/boot-exit
+disk-image/
+disk-image-ubuntu-24-04/
