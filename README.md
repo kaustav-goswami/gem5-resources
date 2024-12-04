@@ -4,6 +4,10 @@ layout: default
 
 # gem5 Resources
 
+This is a modified gem5-resource repository forked from the original google
+source. The new repository on github has missing stuff due to which I am
+maintaining this and original source in this repository.
+
 This repository contains the sources needed to compile the gem5 resources.
 The compiled resources are found in the gem5 resources bucket,
 http://dist.gem5.org/dist. Though these resources are not needed to compile or
