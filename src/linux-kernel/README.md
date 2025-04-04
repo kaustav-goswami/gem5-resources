@@ -34,6 +34,7 @@ support) releases of the Linux kernel:
 - 4.14.134
 - 4.19.83
 - 5.4.49
+- 6.9.9 (DAX/CXL)
 
 In addition, we also have compiled and tested the following LTS releases for
 arm64 architecture only:
