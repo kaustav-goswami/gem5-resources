@@ -21,7 +21,7 @@ apt-get install -y gcc
 apt-get -qq --yes --force-yes install cmake
 apt-get install -y make
 
-apt-get install -y libboost-all-dev ndctl autotools-dev automake libevent-dev
+apt-get install -y ndctl autotools-dev automake libevent-dev pkg-config openjdk-8-jdk
 
 echo "Building disaggregated stuff before we loose root access!"
 
