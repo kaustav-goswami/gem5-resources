@@ -55,7 +55,7 @@ source "qemu" "initialize" {
                       "<f10><wait>"
                     ]
   cpus             = "4"
-  disk_size        = "5000"
+  disk_size        = "16000"
   format           = "raw"
   headless         = "true"
   http_directory   = "http/x86"
