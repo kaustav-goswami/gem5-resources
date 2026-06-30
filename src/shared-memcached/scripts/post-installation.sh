@@ -29,7 +29,7 @@ echo "building shared-memcached and YCSB..."
 cd /home/gem5
 git clone https://github.com/kaustav-goswami/memcached
 cd memcached
-git checkout disaggregated
+git submodule update --init --recursive
 ./autogen.sh
 ./configure
 make -j32
@@ -42,10 +42,16 @@ git checkout disaggregated
 cp ext/apache-maven-3.9.9-bin.tar .
 tar xvf apache-maven-3.9.9-bin.tar
 cp ext/jdk-7u40-linux-x64.rpm .
-cd apache-maven-3.9.9/bin
-export PATH=$PATH:`pwd`
-cd ../..
+cd apache-maven-3.9.9
+mkdir /opt/maven
+mv * /opt/maven
+ln -s /opt/maven/bin/mvn /usr/bin/mvn
+cd /home/gem5/
+chown -R gem5 YCSB/
 
+# Need to run YCSB so that mvn downloads everything it needs
+cd YCSB
+mvn -pl site.ycsb:memcached-binding -am clean package
 echo "all memcached artifacts built!"
 
 echo "Installing serial service for autologin after systemd"
