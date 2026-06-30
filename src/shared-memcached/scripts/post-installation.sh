@@ -38,7 +38,7 @@ cd ..
 echo "Now building YCSB..."
 git clone https://github.com/kaustav-goswami/YCSB.git
 cd YCSB
-git checkout disaggregated
+git checkout disaggregated-qemu
 cp ext/apache-maven-3.9.9-bin.tar .
 tar xvf apache-maven-3.9.9-bin.tar
 cp ext/jdk-7u40-linux-x64.rpm .
