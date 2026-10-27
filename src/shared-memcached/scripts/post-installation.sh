@@ -47,11 +47,12 @@ mkdir /opt/maven
 mv * /opt/maven
 ln -s /opt/maven/bin/mvn /usr/bin/mvn
 cd /home/gem5/
-chown -R gem5 YCSB/
 
 # Need to run YCSB so that mvn downloads everything it needs
 cd YCSB
 mvn -pl site.ycsb:memcached-binding -am clean package
+chown -R gem5 /home/gem5/YCSB/
+chown -R gem5 /home/gem5/.m2/
 echo "all memcached artifacts built!"
 
 echo "Installing serial service for autologin after systemd"
